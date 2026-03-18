@@ -11,4 +11,8 @@ document.addEventListener('keydown', (e) => {
         const link = document.querySelector('a[href]:hover');
         if (link) navigator.clipboard?.writeText(link.href);
     }
+    if (( e.altKey             ) && e.key === 'c' && !window.getSelection().toString()) {
+        const link = document.querySelector('a[href]:hover');
+        if (link) navigator.clipboard?.writeText(link.text);
+    }
 });
